@@ -18,7 +18,6 @@ public class Board {
 	private String level = "";
 	
 	
-	///TODO: CONSTRUCTOR
 	//This must initialize every cell on the board with a generic cell.  It must also assign all of the boxIDs to the cells
 	public Board(){
 		for(int x = 0; x < 9; x++) {
@@ -29,16 +28,12 @@ public class Board {
 		}
 	}
 	
-
-	
-	///TODO: loadPuzzle
 	/*This method will take a single String as a parameter.  The String must be either "easy", "medium" or "hard"
 	 * If it is none of these, the method will set the String to "easy".  The method will set each of the 9x9 grid
 	 * of cells by accessing either "easyPuzzle.txt", "mediumPuzzle.txt" or "hardPuzzle.txt" and setting the Cell.number to 
 	 * the number given in the file.  
 	 * 
 	 * This must also set the "level" variable
-	 * TIP: Remember that setting a cell's number affects the other cells on the board.
 	 */
 	public void loadPuzzle(String level) throws Exception{
 		this.level = level;
@@ -66,7 +61,6 @@ public class Board {
 		
 	}
 	
-	///TODO: isSolved
 	/*This method scans the board and returns TRUE if every cell has been solved.  Otherwise it returns FALSE
 	 * 
 	 */
@@ -81,8 +75,6 @@ public class Board {
 		
 	}
 
-
-	///TODO: DISPLAY
 	/*This method displays the board neatly to the screen.  Please see the sample output from the assignment to see the format required.
 	 */
 	public void display(){
@@ -101,7 +93,6 @@ public class Board {
 		
 	}
 	
-	///TODO: solve
 	/*This method solves a single cell at x,y for number.  It also must adjust the potentials of the remaining cells in the same row,
 	 * column, and box.
 	 */
@@ -250,7 +241,6 @@ public class Board {
 		
 	}
 	
-	///TODO: logic1
 	/*This method searches each row of the puzzle and looks for cells that only have one potential.  If it finds a cell like this, it solves the cell 
 	 * for that number. This also tracks the number of cells that it solved as it traversed the board and returns that number.
 	 */
@@ -272,7 +262,6 @@ public class Board {
 					
 	}
 	
-	///TODO: logic2
 	/*This method searches each row for a cell that is the only cell that has the potential to be a given number.  If it finds such a cell and it
 	 * is not already solved, it solves the cell.  It then does the same thing for the columns.This also tracks the number of cells that 
 	 * it solved as it traversed the board and returns that number.
@@ -321,7 +310,6 @@ public class Board {
 		return changesMade;
 	}
 	
-	///TODO: logic3
 	/*This method searches each box for a cell that is the only cell that has the potential to be a given number.  If it finds such a cell and it
 	 * is not already solved, it solves the cell. This also tracks the number of cells that it solved as it traversed the board and returns that number.
 	 */
@@ -356,7 +344,6 @@ public class Board {
 	}
 	
 	
-	///TODO: logic4
 		/*This method searches each row for the following conditions:
 		 * 1. There are two unsolved cells that only have two potential numbers that they can be
 		 * 2. These two cells have the same two potentials (They can't be anything else)
@@ -449,7 +436,6 @@ public class Board {
 	}
 	
 	
-	///TODO: errorFound
 	/*This method scans the board to see if any logical errors have been made.  It can detect this by looking for a cell that no longer has the potential to be 
 	 * any number.
 	 */
@@ -482,3 +468,4 @@ public class Board {
 
 */
   
+
